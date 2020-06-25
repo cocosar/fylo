@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- displays site properly based on user's device -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
+    <!-- ICONO HEAD -->
     <link
       rel="icon"
       type="image/png"
@@ -16,6 +16,9 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./styles.css" />
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="body">
@@ -37,16 +40,17 @@
           </div>
         </div>
 
-        <!-- <div class="storage-left">
-          185 GB Left
-        </div> -->
+
 
         <div class="container-two">
-          <p>You’ve used 815 GB of your storage</p>
+          <div class="storage-left">
+            <p>185 GB Left</p>
+          </div>
+          <p id="used-storage">You’ve used <span>815 GB</span> of your storage</p>
 
           <div class="progress-bar">
-            <div>
-              <progress id="progress" value="80" max="100"></progress>
+            <progress id="progress" value="80" max="100"></progress>
+            <div class="progress-text">
               <p>0 GB</p>
               <p>1000 GB</p>
             </div>

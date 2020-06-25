@@ -11,23 +11,24 @@
 * {
   margin: 0;
   padding: 0;
+  
 }
 
 body {
-  width: 100vw;
+  width: auto;
   height: auto;
+  background-image: url(./images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: 100% auto;
+  object-fit: contain;
+  background-color: hsl(229, 57%, 11%);
+  
 }
 
 .body {
-  background-image: url(./images/bg-desktop.png);
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: bottom;
-  background-size: 100%;
-  object-fit: contain;
   width: auto;
   height: 100vh;
-  background-color: hsl(229, 57%, 11%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,7 +37,7 @@ body {
 .main {
   display: flex;
   height: auto;
-  width: 100%;
+  width: 70%;
   padding: 30px;
   justify-content: center;
   align-items: flex-end;
@@ -44,8 +45,8 @@ body {
 
 .container-one {
   background-color: hsl(228, 56%, 26%);
-  width: 20vw;
-  height: 25vh;
+  width: 350px;
+  height: 200px;
   border-radius: 15px 100px 15px 15px;
   display: flex;
   align-items: center;
@@ -56,16 +57,16 @@ body {
 .logo-buttons {
   display: flex;
   flex-direction: column;
-  width: 10vw;
-  margin-left: 2vw;
-  height: 15vh;
+  width: 200px;
+  margin-left: 40px;
+  height: 130px;
   justify-content: space-evenly;
 }
 
 #logo {
-  width: 8vw;
-  height: 5vh;
-  margin-bottom: 2vh;
+  width: 150px;
+  height: 50px;
+  margin-bottom: 30px;
   align-self: flex-start;
 }
 
@@ -91,11 +92,110 @@ body {
 
 .container-two {
   background-color: hsl(228, 56%, 26%);
-  width: 30vw;
-  height: 20vh;
+  width: 550px;
+  height: 150px;
   border-radius: 15px 15px 15px 15px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  font-family: Raleway;
+  color: hsl(243, 100%, 93%);
+  font-weight: 100;
+  
+}
+
+.container-two #used-storage, .progress-bar{
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+#used-storage {
+  align-self: flex-start;
+  margin-bottom: 5px;
+}
+
+#used-storage span {
+  font-weight: bold;
+}
+
+.container-two progress {
+  width: 100%;
+}
+
+.progress-text {
+  display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.storage-left {
+  display: flex;
+  position: absolute;
+  background-color: hsl(243, 100%, 93%);
+  padding: 20px;
+  border-radius: 20px;
+  align-self: flex-end;
+  color: black;
+  font-size: 20px;
+  font-weight: 800;
+  transform: translate(-20px, -80px);
+}
+
+
+/* MEDIAQUERY PARA PANTALLAS MAS CHICAS (NO CELULARES) */
+@media only screen and (max-width: 1000px){
+  .main {
+   flex-direction: column;
+   align-items: center;
+  }
+  .container-one {
+    margin-bottom: 30px;
+    margin-right: 0px;
+  }
+
+  .container-two {
+    width: 350px;
+  }
+
+  #used-storage {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .storage-left {
+    align-self: center;
+    transform: translate(0, 75px);
+  }
+
+}
+
+@media only screen and (max-width: 420px){
+
+  body {
+    background-size: 100% 100%;
+    object-fit: none;
+    background-position: left;
+  }
+
+  .main {
+   flex-direction: column;
+   align-items: center;
+  }
+  .container-one {
+    margin-bottom: 30px;
+    margin-right: 0px;
+    width: 80vw;
+  }
+
+  .container-two {
+    width: 80vw;
+  }
+
+  #used-storage {
+    text-align: center;
+    font-size: 14px;
+  }
+
 }
